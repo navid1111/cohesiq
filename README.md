@@ -32,6 +32,8 @@ Cohesiq is a decoupled full-stack application: a **Next.js 16** App Router front
 
 See **[`docs/diagrams/architecture.md`](docs/diagrams/architecture.md)** for the full as-built diagram (containers, ports, external services, request paths, and env vars).
 
+For the whole system in one place, read the **[technical design document (PDF)](docs/diagrams/html/technical-document.pdf)**. It has 12 sections and 10 diagrams covering architecture, API surface, auth, the matching engine, the deal lifecycle, the data model, configuration, operations and known gaps. An HTML version is at [`docs/diagrams/html/technical-document.html`](docs/diagrams/html/technical-document.html) (open it locally in a browser).
+
 ## Tech stack
 
 | Layer | Technologies |
@@ -119,6 +121,8 @@ Start at **[`docs/index.md`](docs/index.md)** — the full navigation map for ev
 | Doc | What it covers |
 |---|---|
 | [`docs/index.md`](docs/index.md) | Master navigation map for all documentation |
+| [Technical design document](docs/diagrams/html/technical-document.pdf) ([HTML](docs/diagrams/html/technical-document.html)) | The whole system with diagrams: architecture, API, auth, matching, deal lifecycle, data model, config, ops, known gaps |
+| [`docs/diagrams/html/`](docs/diagrams/html/index.html) | The 10 standalone diagrams (rebuild with `python3 docs/diagrams/html/build.py`) |
 | [`docs/srs.md`](docs/srs.md) | Product spec — functional/non-functional requirements, user stories, ERD |
 | [`docs/plan.md`](docs/plan.md) | Implementation plan, phase status, and the divergence ledger (§3) |
 | [`docs/schema.md`](docs/schema.md) | Code-true relational schema (read before changing any model) |

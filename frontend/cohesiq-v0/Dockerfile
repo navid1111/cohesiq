@@ -6,7 +6,8 @@
 FROM node:22-alpine
 
 # Install pnpm globally (pinned to v9 for stable Docker builds)
-RUN corepack enable && corepack prepare pnpm@9 --activate
+# Use npm to avoid corepack network issues inside minimal images
+RUN npm install -g pnpm@9
 
 WORKDIR /app
 

@@ -33,7 +33,7 @@ export function ConnectYouTubeClient() {
     setIsLoading(true);
     setLocalError(null);
     try {
-      const response = await fetch("/api/auth/youtube/authorize", {
+      const response = await fetch("/api/oauth/youtube/authorize", {
         method: "POST",
       });
 

@@ -60,6 +60,8 @@ Never silently edit `srs.md` to match a shortcut. Record divergences in `plan.md
 | [`diagrams/dfd.md`](diagrams/dfd.md) | Logical data flow diagram (L0 context + L1 major processes) — technology-agnostic |
 | [`diagrams/erd.md`](diagrams/erd.md) | Entity relationship diagram — mirrors the live PostgreSQL schema |
 | [`diagrams/use-case.md`](diagrams/use-case.md) | UML use case diagram covering all actor/system interactions |
+| [`diagrams/html/index.html`](diagrams/html/index.html) | Editorial HTML diagram set (code-checked): architecture, backend layers, journey swimlane, matching pipeline + weights, run-matching sequence, application/contract state machines, two ER diagrams. Rebuild with `python3 docs/diagrams/html/build.py` |
+| [`diagrams/html/technical-document.html`](diagrams/html/technical-document.html) | **Technical design document** — whole system in 12 sections with all 10 figures embedded: architecture, backend API surface, frontend routes, auth, workflow, matching, deal lifecycle + endpoint map, data model, configuration, operations/tests, known gaps (G1–G9). Built by the same `build.py` run; PDF copy [`technical-document.pdf`](diagrams/html/technical-document.pdf) via `export_pdf.py` (needs Playwright + Chromium) |
 
 ---
 
@@ -113,6 +115,7 @@ These files are background research — informational, not prescriptive.
 
 | File | What it contains |
 |---|---|
+| [`api-testing.md`](api-testing.md) | Backend route catalog with access rules, query parameters, and copy-ready API-testing bodies |
 | [`seeding.md`](seeding.md) | **Seeding reference** — use `seed.sql` (real creator data); reset procedure; what survives a DB reset; legacy scripts status |
 | [`deployment-guide.md`](deployment-guide.md) | Deployment instructions, Docker Compose configuration, environment setup |
 | [`openapi.json`](openapi.json) | OpenAPI 3.x specification for all backend API endpoints |

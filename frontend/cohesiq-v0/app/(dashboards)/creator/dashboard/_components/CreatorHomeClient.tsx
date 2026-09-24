@@ -98,7 +98,7 @@ export function CreatorHomeClient({ creator, applications, suggestedCampaigns }:
     setSyncing("youtube");
     setSyncError(null);
     try {
-      const response = await fetch("/api/auth/youtube/authorize", { method: "POST" });
+      const response = await fetch("/api/oauth/youtube/authorize", { method: "POST" });
       if (!response.ok) {
         const message = await response.text();
         throw new Error(message || "Failed to generate YouTube auth URL.");

@@ -35,7 +35,7 @@ export function ConnectTikTokClient() {
     setIsLoading(true);
     setLocalError(null);
     try {
-      const response = await fetch("/api/auth/tiktok/authorize", {
+      const response = await fetch("/api/oauth/tiktok/authorize", {
         method: "POST",
       });
 
